@@ -1,6 +1,5 @@
 :root{
-    --pink:#e84393;
-
+    --pink:#fd2c94;
 }
 
 *{
@@ -18,7 +17,25 @@ html{
     scroll-behavior: smooth;
     scroll-padding-top: 6rem;
     overflow-x: hidden;
+}
 
+section{
+    padding: 2rem 9%;
+}
+
+.btn{
+    display: inline-block;
+    margin-top: 1rem;
+    border-radius: 5rem;
+    background: #333;
+    color: #fff;
+    padding: 0.9rem 3.5rem; 
+    cursor: pointer;
+    font-size: 1.7rem;
+}
+
+.btn:hover{
+    background: var(--pink);
 }
 
 header{
@@ -30,7 +47,7 @@ header{
     align-items: center;
     justify-content: space-between;
     z-index: 1000;
-    box-shadow: 0.5rem 1rem rgba(0,0,0,.1);
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,.1);
 }
 
 header .logo{
@@ -40,7 +57,7 @@ header .logo{
 }
 
 header .logo span{
-color: var(--pink);
+    color: var(--pink);
 }
 
 header .navbar a{
@@ -50,18 +67,17 @@ header .navbar a{
 }
 
 header .navbar a:hover{
-color: var(--pink);
+    color: var(--pink);
 }
 
 header .icons a{
-font-size: 2.5rem;
-color: #333;
-margin-left: 1.5rem;
-
+    font-size: 2.5rem;
+    color: #333;
+    margin-left: 1.5rem;
 }
 
 header .icons a:hover{
-color: var(--pink);
+    color: var(--pink);
 }
 
 header #toggler{
@@ -72,52 +88,115 @@ header .fa-bars{
     font-size: 3rem;
     color: #333;
     border-radius: .5rem;
-    padding: 5rem 1.5rem;
+    padding: 0.5rem 1.5rem; 
     cursor: pointer;
-    border: 1rem solid rgba(0,0,0,.3);
+    border: 0.1rem solid rgba(0,0,0,.3); 
     display: none;
 }
 
+.home {
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    background: url(../images/bg-3.jpg) no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    padding-top: 8rem;
+}
+
+.home .content {
+    max-width: 50rem;
+    z-index: 2;
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.6);
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+.home .content h3 {
+    font-size: 6rem;
+    color: #333; 
+}
+
+.home .content span {
+    font-size: 2.5rem;
+    color: #fd2c94; 
+}
+
+.home .content p {
+    font-size: 1.6rem;
+    color: #4a4a4a; 
+}
 
 
 
 @media (max-width:991px){
     html{
-    font-size: 55%;
+        font-size: 55%;
     }
 
     header{
         padding: 2rem;
     }
+
+    section{
+        padding: 2rem;
+    }
+
+    .home{
+        background-position: left;
+    }
 }
 
 @media (max-width:768px){
- header .fa-bars{
-    display: block;
- }
+    header .fa-bars{
+        display: block;
+    }
 
- header .navbar{
-    position: absolute;
-    top: 100%; left: 0; right: 0;
-    background: #eee;
-    border-top: .1rem solid rgba(0,0,0,.1);
-    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
- }
+    header .navbar{
+        position: absolute;
+        top: 100%; left: 0; right: 0;
+        background: #eee;
+        border-top: .1rem solid rgba(0,0,0,.1);
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
 
- header #toggler:checked ~ .navbar{
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
- }
+    header #toggler:checked ~ .navbar{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
 
- header .navbar a{
-    margin: 1.5rem;
-    padding: 1.5rem;
-    background: #fff;
-    border: .1rem solid rgba(0,0,0,.1);
- }
+    header .navbar a{
+        margin: 1.5rem;
+        padding: 1.5rem;
+        background: #fff;
+        border: .1rem solid rgba(0,0,0,.1);
+        display: block;
+    }
+
+    .home .content h3{
+        font-size: 5rem;
+    }
+
+    .home .content span{
+        font-size: 2.2rem;
+    }
+
+    .home .content p{
+        font-size: 1.4rem;
+    }
 }
 
 @media (max-width:450px){
     html{
-    font-size: 50%;
+        font-size: 50%;
+    }
+    
+    .home .content h3{
+        font-size: 4rem;
+    }
+    
+    .home .content span{
+        font-size: 2rem;
     }
 }
