@@ -195,6 +195,42 @@ header .fa-bars{
 }
 
 
+.icons-container{
+    background: #eee;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: space-between;
+    padding: 3rem 5%;
+}
+
+.icons-container .icons{
+    background: #fff;
+    border: .1rem solid rgba(0,0,0,.1);
+    padding: 2.5rem;
+    display: flex;
+    align-items: center;
+    flex: 1 1 calc(25% - 1rem);
+    min-width: 25rem;
+    box-shadow: 0 .2rem .5rem rgba(0,0,0,0.05); 
+    transition: 0.2s ease-in-out;
+}
+
+.icons-container .icons img{
+    height: 6rem;
+    margin-right: 2.5rem;
+}
+
+.icons-container .icons h3{
+    color: #333;
+    padding-bottom: .5rem;
+    font-size: 1.7rem;
+}
+
+.icons-container .icons span{
+    color: #555;
+    font-size: 1.4rem;
+}
 
 
 @media (max-width:991px){
@@ -251,6 +287,15 @@ header .fa-bars{
     .home .content p{
         font-size: 1.4rem;
     }
+
+    .icons-container .icons h3{
+        font-size: 2rem;
+    }
+
+    .icons-container .icons span{
+        font-size: 1.7rem;
+    }
+
 }
 
 @media (max-width:450px){
